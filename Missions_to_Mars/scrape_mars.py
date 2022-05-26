@@ -114,6 +114,9 @@ def scrape():
         
         # Clicks the link using the title we just grabbed
         browser.find_by_css("h3").links.find_by_partial_text(new_title).click()
+
+        # Let it sleep for 1 second
+        time.sleep(1)
         
         # Return all the HTML on our page
         html = browser.html
@@ -128,6 +131,9 @@ def scrape():
         
         # Goes back to the main page
         browser.back()
+
+        # Let it sleep for 1 second
+        time.sleep(1)
         
         # Return all the HTML on our page
         html = browser.html
